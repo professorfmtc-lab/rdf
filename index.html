@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RDF — Rádio Dom Fernando · Inscrições</title>
+<meta name="description" content="Inscrições para a RDF, a rádio da Escola Básica D. Fernando II.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#EDF1F7; --surface:#fff; --ink:#16233D; --muted:#5A6478;
+    --line:#DCE3EC; --accent:#1E63E9; --hot:#EC3B2B;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:
+      radial-gradient(1100px 600px at 50% -8%, #DCE8F7 0%, var(--bg) 60%);
+    color:var(--ink);font-family:'Barlow',system-ui,-apple-system,sans-serif;
+    display:flex;align-items:center;justify-content:center;padding:28px}
+  .card{width:100%;max-width:560px;background:var(--surface);border:1.5px solid var(--line);
+    border-radius:26px;box-shadow:0 24px 60px rgba(22,35,61,.14);
+    padding:40px 34px 30px;text-align:center;position:relative;overflow:hidden}
+
+  .live{display:inline-flex;align-items:center;gap:9px;background:var(--hot);color:#fff;
+    padding:8px 15px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:2px}
+  .live i{width:9px;height:9px;border-radius:50%;background:#fff;
+    box-shadow:0 0 0 4px rgba(255,255,255,.35);animation:pulse 1.4s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  .mark{font-family:'Anton',sans-serif;font-size:92px;line-height:.9;letter-spacing:2px;
+    color:var(--hot);margin:20px 0 2px}
+  .sub{font-family:'Barlow',sans-serif;font-weight:700;font-size:20px;letter-spacing:3px;
+    text-transform:uppercase;color:var(--ink)}
+  .escola{font-size:14px;color:var(--muted);margin-top:4px;letter-spacing:.4px}
+
+  .eq{display:flex;align-items:flex-end;justify-content:center;gap:6px;height:56px;margin:22px 0 6px}
+  .eq span{width:8px;border-radius:3px;background:var(--accent);animation:bar 1.1s ease-in-out infinite}
+  .eq span:nth-child(3n){background:var(--hot)}
+  .eq span:nth-child(2){animation-delay:.15s}.eq span:nth-child(3){animation-delay:.30s}
+  .eq span:nth-child(4){animation-delay:.45s}.eq span:nth-child(5){animation-delay:.60s}
+  .eq span:nth-child(6){animation-delay:.20s}.eq span:nth-child(7){animation-delay:.40s}
+  .eq span:nth-child(8){animation-delay:.10s}.eq span:nth-child(9){animation-delay:.50s}
+  @keyframes bar{0%,100%{height:16px}50%{height:52px}}
+
+  h1{font-family:'Anton',sans-serif;font-size:38px;line-height:1;text-transform:uppercase;
+    margin:14px 0 6px}
+  h1 em{color:var(--accent);font-style:normal}
+  p.lead{font-size:17px;color:var(--muted);margin:0 auto 26px;max-width:400px}
+
+  .btn{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#fff;
+    text-decoration:none;font-weight:700;font-size:20px;padding:17px 32px;border-radius:14px;
+    box-shadow:0 10px 24px rgba(30,99,233,.35);transition:transform .12s, box-shadow .12s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(30,99,233,.42)}
+  .btn svg{width:24px;height:24px}
+  .ajuda{margin-top:16px;font-size:14px;color:var(--muted)}
+  .ajuda b{color:var(--ink)}
+
+  footer{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--muted);line-height:1.5}
+  footer .credito{font-weight:600;color:#7A8496}
+
+  @media (max-width:440px){ .mark{font-size:72px} h1{font-size:30px} }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="live"><i></i>EM DIRETO</div>
+
+    <div class="mark">RDF</div>
+    <div class="sub">Rádio Dom Fernando</div>
+    <div class="escola">Escola Básica D. Fernando II · Sintra</div>
+
+    <div class="eq" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <h1>Queres <em>fazer rádio</em>?</h1>
+    <p class="lead">As inscrições estão abertas. Escolhe o teu bloco no horário e junta-te à equipa da RDF.</p>
+
+    <a class="btn" id="abrir" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="2" width="6" height="12" rx="3"></rect>
+        <path d="M5 10a7 7 0 0 0 14 0"></path>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+      </svg>
+      Abrir as inscrições
+    </a>
+
+    <div class="ajuda">Fala com o <b>Prof. Francisco Cavaco</b> ou o <b>Prof. Nuno Cid</b>.</div>
+
+    <footer>
+      RDF · Rádio Dom Fernando — a rádio da tua escola<br>
+      <span class="credito">Powered by Claude IA &amp; Ideias&amp;Soltas — concepção de produtos multimédia</span>
+    </footer>
+  </main>
+
+<script>
+  /* ===== COLA AQUI O LINK DA TUA APP (o URL que acaba em /exec) ===== */
+  const APP_URL = "https://script.google.com/macros/s/AKfycbyCW6I5N4BsFBRiDv2qAaP1FeoBXu4NcjubTVrzklyGPl-xtubC7Z7Orpr8XhricajeXA/exec";
+
+  const btn = document.getElementById("abrir");
+  if (APP_URL && APP_URL.indexOf("http") === 0) {
+    btn.href = APP_URL;
+  } else {
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      alert("Falta colar o link da app na variável APP_URL, dentro do código desta página.");
+    });
+  }
+</script>
+</body>
+</html>
